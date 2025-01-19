@@ -68,7 +68,6 @@ border-radius: 5px;
   font-size: 23px;
   font-weight:600;
   padding-right: 10px;
-  //color: white;
 }
 
 
@@ -87,13 +86,12 @@ border-radius: 5px;
   height: 40px; 
   border: 2px solid #e9d2d2; 
   border-radius: 5px;
-  //padding: 5px 10px; /* Відступи всередині */
   padding-right: 40px;
-  text-align: right; /* Текст вирівняно по правому краю */
+  text-align: right; 
   font-family: 'Times New Roman', Times, serif;
   font-size: 23px; /* Розмір тексту */
   font-weight:600;
-  transition: all 0.3s ease; /* Анімація при ховері/фокусі */
+  transition: all 0.3s ease; 
   @include tablet{
     width: 350px;
     height: 30px;
@@ -101,15 +99,15 @@ border-radius: 5px;
 }
 
 .input-number:hover {
-  border-color: #007bff; /* Колір рамки */
-  background-color: #f0f8ff; /* Фон */
+  border-color: #007bff; 
+  background-color: #f0f8ff; 
 }
 
-/* Стилізація при фокусі */
+
 .input-number:focus {
-  border-color: #0056b3; /* Колір рамки */
-  outline: none; /* Забирає стандартний блакитний фокус */
-  background-color: #e0f3ff; /* Фон */
+  border-color: #0056b3; 
+  outline: none; 
+  background-color: #e0f3ff; 
 }
 
 
@@ -128,13 +126,12 @@ border-radius: 5px;
 }
 .button-wrapper{
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 колонки*/
+  grid-template-columns: repeat(4, 1fr); 
   gap: $gap-buttons;
-  //width: 350px;
+
   @include tablet{
   width: 350px;
   }
-
 }
 
 
@@ -202,8 +199,6 @@ border-radius: 5px;
     #4B5556 80%);
   background-size: 100%;
   background-position: top left;
-
-  
 }
 
 .key.number .key-content {
@@ -219,8 +214,6 @@ border-radius: 5px;
 }
 
 .key.operation {
-
- // padding-top: 11px;
   background-color: #858585;
   background: linear-gradient(
     90deg,
@@ -233,18 +226,12 @@ border-radius: 5px;
 }
 
 .key.operation .key-content {
- 
- 
-  //border-radius: 66%/18% ;
-
   background-color: #FFFDFC;
   background: radial-gradient(#E4E4E4, #E5DFDF, #F7F5F6);
   background-size: 100% 200%;
   background-position: center center;
   color: #110D0E;
-
 }
-
 
 
 .key.number .key-content .decimal {
@@ -255,24 +242,24 @@ border-radius: 5px;
 
 
 .key.general {
-  background-color: #007070; /* Світліший бірюзовий */
+  background-color: #007070; 
   background: linear-gradient(
     90deg,
-    #007070, /* Світлий бірюзовий */
-    #009494 80%); /* Світлий аквамарин */
+    #007070, 
+    #009494 80%); 
   background-size: 100%;
   background-position: top left;
 }
 
 .key.general .key-content {
-  background-color: #008080; /* Яскравий аквамариновий */
+  background-color: #008080; 
   background: radial-gradient(
-    #00A3A3, /* Світліший аквамарин */
-    #007070, /* Бірюзовий */
-    #005050); /* Трохи темніший бірюзовий */
+    #00A3A3, 
+    #007070, 
+    #005050); 
   background-size: 200% 300%;
   background-position: center center;
-  color: #E0F8F8; /* Дуже світлий аквамарин для контрасту */
+  color: #E0F8F8; 
   font-size: 1.5em;
   @include tablet{
     font-size: 2em;
@@ -282,13 +269,13 @@ border-radius: 5px;
 //____________________________
 @keyframes blink {
   0% {
-    opacity: 1; /* Іконка повністю видима */
+    opacity: 1; 
   }
   50% {
-    opacity: 0.6; /* Іконка зникає */
+    opacity: 0.6; 
   }
   100% {
-    opacity: 1; /* Іконка знову з'являється */
+    opacity: 1; 
   }
 }
 
@@ -298,10 +285,10 @@ border-radius: 5px;
 }
 
 #startIcon{
-  position: absolute; /* Абсолютне позиціонування */
-  top: 50%; /* Зміщуємо вниз на 50% висоти контейнера */
-  left: 50%; /* Зміщуємо вправо на 50% ширини контейнера */
-  transform: translate(-50%, -50%); /* Центруємо точно посередині */
+  position: absolute; 
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
   width: 60px; 
   height: 60px;
   background-size:cover;  
