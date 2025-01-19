@@ -1,0 +1,366 @@
+
+ .calculator{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:$gap-buttons;
+padding-right: 20px;
+  padding-left: 20px;
+@include tablet{
+     gap: $gap-calcElemts;
+  }
+  }
+ 
+
+
+.settings-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: $gap-buttons;
+  padding-left:20px;
+  padding-right:20px;
+  @include tablet{
+    padding-left:55px;
+  padding-right:0px;
+  }
+  
+}
+.ExerciseAndInputWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 55px;
+  @include tablet{
+  
+   padding-top: 20px;
+  }
+}
+
+.exercise-wrapper{
+display: block; 
+width: 260px;
+height: 80px;
+background-color: rgba(220, 215, 228, 0.3);
+border-radius: 5px;
+@include tablet{
+  width: 350px;
+  height: 80px;
+}
+}
+
+
+
+
+//______________________________Input_______________________/
+
+.slider-container{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); 
+  gap: 10px;
+  // width: 350px;
+ @include tablet{
+  grid-template-columns: repeat(2, 1fr); 
+ }
+}
+
+.generated-number,
+.operator{
+  font-size: 23px;
+  font-weight:600;
+  padding-right: 10px;
+  //color: white;
+}
+
+
+.input-answer {
+  position: relative;
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-end; 
+ 
+}
+
+
+
+.input-number {
+  width: 260px; 
+  height: 40px; 
+  border: 2px solid #e9d2d2; 
+  border-radius: 5px;
+  //padding: 5px 10px; /* Відступи всередині */
+  padding-right: 40px;
+  text-align: right; /* Текст вирівняно по правому краю */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 23px; /* Розмір тексту */
+  font-weight:600;
+  transition: all 0.3s ease; /* Анімація при ховері/фокусі */
+  @include tablet{
+    width: 350px;
+    height: 30px;
+  }
+}
+
+.input-number:hover {
+  border-color: #007bff; /* Колір рамки */
+  background-color: #f0f8ff; /* Фон */
+}
+
+/* Стилізація при фокусі */
+.input-number:focus {
+  border-color: #0056b3; /* Колір рамки */
+  outline: none; /* Забирає стандартний блакитний фокус */
+  background-color: #e0f3ff; /* Фон */
+}
+
+
+
+//__________Calcualtor buttons________________________________//
+
+.calculator-buttons{
+  display: flex;
+  flex-direction: row;
+  gap: $gap-buttons;
+  justify-content: center;
+  align-items: flex-end;
+@include tablet{
+  flex-direction: row;
+  }
+}
+.button-wrapper{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки*/
+  gap: $gap-buttons;
+  //width: 350px;
+  @include tablet{
+  width: 350px;
+  }
+
+}
+
+
+
+.key {
+  cursor: pointer;
+  display: inline-block;
+  width: 60px;
+  height: 60px;  
+  margin: 0;
+  margin-right: -2px;
+  margin-left: 1px;
+  margin-top: 1px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+  @include tablet{
+    width: 80px;
+    height: 80px;  
+  }
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.key .key-content {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 7px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5em;
+  border-radius: 33%;
+  position: relative;
+  top: 7.5px;
+  left: 7.5px;
+  transition: transform 150ms ease-in-out, box-shadow 150ms ease-in-out;
+@include tablet{
+    width: 60px;
+    height: 60px; 
+    font-size: 2em;
+    padding-top: 12px;
+  }
+  &:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: none;
+  }
+
+  &:active{
+    transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border: 2px solid gray;
+  }
+}
+
+.key.number {
+  background-color: #333F3B;
+  background: linear-gradient(
+    90deg,
+    #182629,
+    #4B5556 80%);
+  background-size: 100%;
+  background-position: top left;
+
+  
+}
+
+.key.number .key-content {
+  background-color: #3E4C4D;
+  background: radial-gradient(
+    #3E4C4D,
+    #38474A,
+    #343E3F
+  );
+  background-size: 150% 350%;
+  background-position: center center;
+  color: #F5FFFF;
+}
+
+.key.operation {
+
+ // padding-top: 11px;
+  background-color: #858585;
+  background: linear-gradient(
+    90deg,
+    #858585,
+    #F6F1EE 80%);
+  background-size: 100%;
+  background-position: top left;
+
+
+}
+
+.key.operation .key-content {
+ 
+ 
+  //border-radius: 66%/18% ;
+
+  background-color: #FFFDFC;
+  background: radial-gradient(#E4E4E4, #E5DFDF, #F7F5F6);
+  background-size: 100% 200%;
+  background-position: center center;
+  color: #110D0E;
+
+}
+
+
+
+.key.number .key-content .decimal {
+  position: relative;
+  top: -0.25em;
+}
+
+
+
+.key.general {
+  background-color: #007070; /* Світліший бірюзовий */
+  background: linear-gradient(
+    90deg,
+    #007070, /* Світлий бірюзовий */
+    #009494 80%); /* Світлий аквамарин */
+  background-size: 100%;
+  background-position: top left;
+}
+
+.key.general .key-content {
+  background-color: #008080; /* Яскравий аквамариновий */
+  background: radial-gradient(
+    #00A3A3, /* Світліший аквамарин */
+    #007070, /* Бірюзовий */
+    #005050); /* Трохи темніший бірюзовий */
+  background-size: 200% 300%;
+  background-position: center center;
+  color: #E0F8F8; /* Дуже світлий аквамарин для контрасту */
+  font-size: 1.5em;
+  @include tablet{
+    font-size: 2em;
+  }
+}
+
+//____________________________
+@keyframes blink {
+  0% {
+    opacity: 1; /* Іконка повністю видима */
+  }
+  50% {
+    opacity: 0.6; /* Іконка зникає */
+  }
+  100% {
+    opacity: 1; /* Іконка знову з'являється */
+  }
+}
+
+.startIconWrap{
+  position: relative;
+  animation: blink 1s infinite; 
+}
+
+#startIcon{
+  position: absolute; /* Абсолютне позиціонування */
+  top: 50%; /* Зміщуємо вниз на 50% висоти контейнера */
+  left: 50%; /* Зміщуємо вправо на 50% ширини контейнера */
+  transform: translate(-50%, -50%); /* Центруємо точно посередині */
+  width: 60px; 
+  height: 60px;
+  background-size:cover;  
+background-repeat: no-repeat;
+}
+
+//_______________________________________________________________________________
+
+  .exercise{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 30px;
+  }
+
+  .input-number{
+    text-align: right;
+  }
+
+  .progressBarContainer{
+    width: 260px;
+    height: 15px; 
+    background-color: transparent; 
+   
+    border-radius: 5px; 
+    overflow: hidden;
+    @include tablet{
+      width: 350px;
+    }
+  }
+  .progressBar{
+    width: 100%; 
+    height: 100%; 
+    background-color: transparent;
+  }
+
+  .flag{
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    background-size: cover;  
+    background-repeat: no-repeat;  
+    background-position: center;
+    @include tablet{
+      right: -10%;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .green{
+     background-image: url('./../../icons/yes.png') ;
+  }
+  
+  .red{
+    background-image: url('./../../icons/no.png') ;
+  }
+
+  
+  

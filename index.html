@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/css/main.css">
+    <title>calculator</title>
+</head>
+<body>
+
+<div class="container">
+<div class="calculator">
+  <div class="burger-menu-icon">
+    <span class="burger-menu-icon-element" ></span>
+    <span class="burger-menu-icon-element" ></span>
+    <span class="burger-menu-icon-element" ></span>
+  </div> 
+  <div class="ExerciseAndInputWrapper">
+    <div class="exercise-wrapper">
+<ul class ="exercise">    
+  </ul>
+     </div>
+<div class="input-answer">
+    <div class="flag"> </div>
+    <input type="text" id="number-input" class="input-number" placeholder="input your answer" readonly> 
+    
+</div></div>
+
+<div id="progressBarContainer" class="progressBarContainer" >
+  <div id="progressBar" class="progressBar"></div>
+</div>
+
+
+<div class="settings-wrapper">
+  
+
+  <div class= "time_exercise" id="timeline">
+    <label for="option1">
+      <input id="option1" type="radio" name="option" value="60" checked> 1 min
+    </label>
+    <label for="option2">
+      <input id="option2" type="radio" name="option" value="180"> 3 min
+    </label>
+    <label for="option3">
+      <input id="option3" type="radio" name="option" value="300"> 5 min
+    </label>
+    
+  </div>
+<div class="checkbox-list"> 
+    <label> <input type="checkbox" name="option" checked value="+">+</label>
+    <label> <input type="checkbox" name="option" value="-">-</label>
+    <label> <input type="checkbox" name="option" value="*">✕</label>
+    <label> <input type="checkbox" name="option" value="/">/</label>
+    <label> <input type="checkbox" name="option" value="%">%</label>
+</div>
+<div class="slider-container">
+  <div class="num-one">
+    
+    <label for="numOne">First number:</label>
+    
+    <input type="range" id="numOne"   min="1" max="4" value="1" step="1">
+   
+    <span id="first-value-display">1</span></div>
+  
+  <div class="num-two">
+    
+    <label for="numTwo">Second number:</label>
+    
+    <input type="range" id="numTwo"   min="1" max="4" value="1" step="1">
+    <span id="second-value-display">1</span>
+  </div>
+
+</div>
+</div>
+ 
+
+
+
+<div class="calculator-buttons"> 
+
+<div class="button-wrapper">
+ 
+<p class="key number"><span class="key-content">7</span></p>
+<p class="key number"><span class="key-content">8</span></p>
+<p class="key number"><span class="key-content">9</span></p>
+<p class="key general" id="startButton"><span class="key-content startIconWrap" ><svg id="startIcon"   viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><polygon points="24,18 24,46 46,32" fill="white"/></svg></span></p>
+<p class="key number"><span class="key-content">4</span></p>
+<p class="key number"><span class="key-content">5</span></p>
+<p class="key number"><span class="key-content">6</span></p>  
+<p class="key general" id="resetButton"><span class="key-content"> R </span></p>
+<p class="key number"><span class="key-content">1</span></p>
+<p class="key number"><span class="key-content">2</span></p>
+<p class="key number"><span class="key-content">3</span></p>
+<p class="key general"><span class="key-content"> CE </span></p> 
+<p class="key number"><span class="key-content">-</span></p>
+<p class="key number"><span class="key-content">0</span></p>
+
+<p class="key number"><span class="key-content"><span class="decimal">.</span></span></p> 
+
+<p class="key operation"><span class="key-content"> =</span></p>
+ </div>  
+</div>
+</div>
+</div>
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal"> 
+    <div class="modal-close-icon" data-close>
+      <span class="modal-close-icon-element" ></span>
+      <span class="modal-close-icon-element" ></span>
+    </div>
+    <h2 class="modal-answers">Your answers:</h2>
+    <div class="modal-content"> 
+      
+    
+    </div>
+    
+     </div>
+</div>
+     
+<script src="../js/calculator.js"></script>	 
+<script src="./js/burger-menu.js"></script>  
+</body>
+
+</html>
