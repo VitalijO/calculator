@@ -1,7 +1,7 @@
 .burger-menu-icon{
   display: block;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 18px;
   left: 18px;
   width: 30px;
@@ -11,6 +11,7 @@
   display: none;
 }
 }
+
 
 .burger-menu-icon-element{
   position: absolute;
@@ -80,17 +81,4 @@
   }   
 }
 
-.burger-menu-icon{
-  display: block;
-  position: absolute;
-  z-index: 2;
-  top: 18px;
-  left: 18px;
-  width: 30px;
-  height: 20px;
-  cursor: pointer; 
-  @media (min-width:768px){
-  display: none;
-}
-}
 
